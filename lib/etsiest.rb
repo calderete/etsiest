@@ -13,8 +13,9 @@ module Etsiest
 
       get "/search" do
       Etsy.api_key = "#{settings.auth_key}"
-      list = Etsy::Request.get('/listings/active', :includes => ['Images', 'Shop'], 
+      list = Etsy::Request.get('/listings/active', :find => ['Images', 'Shop'], 
       									   :keywords => 'whiskey')
+      
       binding.pry
       erb :index, locals: { items: list.result }
   	  
