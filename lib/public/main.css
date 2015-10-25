@@ -1,0 +1,36 @@
+
+
+body {
+	background-color: #F2F6F7;
+	height: 100%;
+}
+
+.header {
+	height: 30px;
+}
+
+.side_bar {
+	display: inline-block;
+	width: 25%;
+	height: 100%;
+	float: left;
+
+}
+
+.listings {
+	width: 75%;
+	float: right;
+}
+
+.item {
+	display: inline-block;
+	margin: 10px;
+
+	
+}
+
+
+
+}
+
+

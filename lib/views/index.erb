@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="main.css">
 		<title>Etsy</title>
-		<link rel="stylesheets" href="main.css">
+	
 	</head>
 		<body>
-			<form action="/search" "method=get">
-				<input type="text" value="" name="query">
-				<input type="submit" value="Search"
-			</form>
-			<ul>
-				<% items.each do |pic| %>
-				<li> 
-					<img src="<%= pic %>"> 
-				</li>
-				<% end %>
-			</ul>
+			<div class="main_box">
+			<div class="header">
+				<li> this is the header </li>
+			</div>
 
+			<div class="side_bar">
+				<ul>
+					<li> this is the nav bar</li>
+
+				</ul>
+			</div>
+
+			<div class="listings">	
+				<% listings.each do |listing| %>
+					<div class="item">
+						<div class="pic">
+							<img class="pic_img" src="<%= listing["Images"][0]["url_170x135"]%>">
+					    </div>
+						
+					</div>	
+				<% end %>
+			</div>
+		</div>
 		</body>
 </html>

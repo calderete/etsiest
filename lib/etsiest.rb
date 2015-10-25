@@ -12,27 +12,14 @@ module Etsiest
     set :auth_key, "#{ENV["AUTH_KEY"]}"
 
       get "/search" do
-      Etsy.api_key = "#{settings.auth_key}"
-      list = Etsy::Request.get('/listings/active', :includes => ['Images', 'Shop'], 
-      									   :keywords => 'whiskey')
-      @image_list = []
-      response = list.result
-      response.each do |i|
-        binding.pry
-        item = { 
-          line: i["Images"]}
-          #binding.pry
-          item[:line].each do |p|
-            pic = p["url_fullxfull"]
-        @image_list.push(pic)
-
-        end
+        Etsy.api_key = "#{settings.auth_key}"
+        list = Etsy::Request.get('/listings/active', :includes => ['Images', 'Shop'], 
+        									   :keywords => 'whiskey')
+        response = list.result
+        
+          erb :index, locals: {listings: response}
       end
       
-      
-      erb :index, locals: { items: @image_list }
-  	  
-  	  end
 
   	  run! if app_file == $0
   	 
