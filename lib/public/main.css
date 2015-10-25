@@ -8,6 +8,14 @@ body {
 .header {
 	height: 100px;
 	margin-bottom: 35px;
+	background-color: rgb(255, 255, 255);
+	width: 100%;
+
+}
+
+.header h1 {
+	padding-left: 100px;
+	color: rgb(249, 149, 0);
 }
 
 .header .category_list {
@@ -17,15 +25,17 @@ body {
 	border-bottom: 1px;
 	border-style: solid;
 	padding: 20px;
-	margin-top: 35px;
+	margin-top: 5px;
 	display: inline-block;
 	width: 100%;
+	color: grey;
+	background-color: rgb(255, 255, 255);
 	
 }
 
 .side_bar {
 	display: inline-block;
-	width: 150px;
+	width: 200px;
 	height: 100%;
 	float: left;
 	margin-top: 35px;
