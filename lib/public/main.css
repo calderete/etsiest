@@ -7,19 +7,38 @@ body {
 
 .header {
 	height: 100px;
+	margin-bottom: 35px;
+}
+
+.header .category_list {
+	border-top: 1px;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px;
+	border-style: solid;
+	padding: 20px;
+	margin-top: 35px;
+	display: inline-block;
+	width: 100%;
+	
 }
 
 .side_bar {
 	display: inline-block;
-	width: 25%;
+	width: 150px;
 	height: 100%;
 	float: left;
+	margin-top: 35px;
+	margin-left: 70px;
+	border-style: dotted;
+	border-width: 1px;
 
 }
 
 .listings {
 	width: 75%;
 	float: right;
+	margin-top: 25px;
 }
 
 .item {
@@ -32,13 +51,16 @@ body {
 	background-color: rgb(255, 255, 255)
 }
 
+.pic_img {
+	border-style: dotted;
+	border-width: 1px;
+}
+
 .price {
 	float: right;
 	color: rgb(113, 164, 4);
 }
 
-.title {
-	display: inline-block;
-}
+
 
 
