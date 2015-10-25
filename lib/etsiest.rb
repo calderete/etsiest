@@ -16,7 +16,7 @@ module Etsiest
         list = Etsy::Request.get('/listings/active', :includes => ['Images', 'Shop'], 
         									   :keywords => 'whiskey')
         response = list.result
-        binding.pry
+      
           erb :index, locals: {listings: response}
       end
       
